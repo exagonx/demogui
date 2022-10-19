@@ -17,7 +17,6 @@
 '    You should have received a copy of the GNU General Public License
 '    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-'#IncLib "gfframe"
 
 Dim Shared As String Slash
 
@@ -33,6 +32,7 @@ Slash = "/"
 		'#LIBPATH "C:\msys64\mingw64\lib" 
 		Slash = "\"
 	#ENDIF
+
 type GFGUI
 	
 	
@@ -73,7 +73,7 @@ type GFBUTTON extends GFGUI
 		declare function B_HANDLER()as integer
 		declare function KEYFOCUS()as integer
 		
-	protected:
+	private:
 		declare sub P_BUTTON(byval XStart as integer, byval YStart as integer, byval PWidth as integer, byval PHeight as integer, byval Text as string, byval Active as integer)	
 		declare sub B_Click()
 		declare sub B_Hover()
@@ -165,4 +165,5 @@ end type
 
 dim as integer GFGUI.ScreenWidth = 0, GFGUI.ScreenHeight = 0, GFGUI.TotalID = 0, GFGUI.FocusID = 0
 
-
+#include "include\gfguilib.bas"
+#include "include\gfman.bas"

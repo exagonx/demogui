@@ -1,6 +1,5 @@
-
+'#include "include\gfgui.bi"
 #include "gfframe.bas"
-
 
 dim Area as string
 dim Nll as integer
